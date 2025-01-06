@@ -3,10 +3,260 @@
   margin: 0;
 }
 
-.main__catalog {
-  display: grid;
-  grid-template-columns: repeat(3, 250px);
+body {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  padding: 20px;
+
 }
+
+.header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+
+  &__info {
+
+    &-box {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 600px;
+    }
+
+    &-title {
+      font-size: 30px;
+    }
+
+    &-text {
+      max-width: 300px;
+    }
+
+    &-button {
+      width: 277px;
+      height: 88px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 50px 30px 50px;
+      border-radius: 8px;
+      background: rgb(254, 216, 76);
+      font-family: "Montserrat", serif;
+      font-weight: 600;
+    }
+  }
+
+  &__top {
+    display: flex;
+    gap: 50vw;
+    align-items: center;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0 50px;
+  gap: 100px;
+
+  &__catalog {
+    display: grid;
+    grid-template-columns: repeat(3, 380px);
+    gap: 20px;
+
+    .main__product {
+
+      &-image {
+        max-width: 380px;
+        min-height: 245px;
+        border-radius: 10px 10px 10px 10px;
+      }
+
+      &-info {
+        padding: 50px 44px 50px 44px;
+      }
+
+      &-title {
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      &-text {
+        margin-top: 12px;
+        font-size: 16px;
+        font-weight: 400;
+      }
+
+      &-price {
+        margin-top: 24px;
+        font-size: 24px;
+        font-weight: 500;
+      }
+
+      &-button {
+        margin-top: 12px;
+        width: 163px;
+        height: 68px;
+        padding: 20px 40px 20px 40px;
+        border-radius: 8px;
+        background: rgb(254, 216, 76);
+        font-family: "Montserrat", serif;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__order__preparation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 100px;
+
+    &-img {
+      max-width: 500px;
+      border-radius: 100px;
+    }
+
+    &__info {
+      max-width: 520px;
+
+      &-title {
+        font-size: 48px;
+        font-weight: 500;
+      }
+
+      &-text {
+        font-size: 21px;
+        font-weight: 400;
+        margin-top: 24px;
+      }
+
+      &-button {
+        width: 320px;
+        height: 87px;
+        border-radius: 8px;
+        background: rgb(254, 216, 76);
+        margin-top: 40px;
+        font-family: "Montserrat";
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__chef {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+
+    &__box {
+      max-width: 580px;
+
+      &-info {
+        position: absolute;
+        bottom: 40px;
+        right: 80px;
+
+        &-name {
+          background-color: black;
+          color: #fff;
+          padding: 10px 10px 10px 10px;
+          border-radius: 15px 15px 0 0;
+          text-align: center;
+
+        }
+
+        &-position {
+          background-color: #fff;
+          padding: 10px 5px 10px 5px;
+          text-align: center;
+          border-radius: 0 0 15px 15px;
+
+        }
+      }
+
+      &-title {
+        font-size: 48px;
+        font-weight: 500;
+      }
+
+      &-text {
+        margin-top: 36px;
+        font-size: 18px;
+        font-weight: 400;
+        max-width: 500px;
+      }
+
+      &-button {
+        width: 299px;
+        height: 87px;
+        border-radius: 8px;
+        background: rgb(254, 216, 76);
+        margin-top: 50px;
+        font-size: 18px;
+        font-weight: 500;
+        font-family: "Montserrat", serif;
+      }
+    }
+
+
+
+    &__img {
+      max-width: 310px;
+      border-radius: 63px;
+    }
+  }
+
+  &__feedback {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__reviews-carousel {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    gap: 20px;
+  }
+
+  &__review-card {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  &__carousel-buttons {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__prev-button {
+    width: 66px;
+    height: 66px;
+    border-radius: 100px;
+    background: rgb(254, 216, 76);
+  }
+
+  &__next-button {
+    width: 66px;
+    height: 66px;
+    border-radius: 100px;
+    background: rgb(254, 216, 76);
+  }
+
+  
+}
+
+
 
 .example__img-box {
   display: grid;

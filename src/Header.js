@@ -1,9 +1,9 @@
 function Header() {
   return (
     <header className="header">
-      <div className="header__center-img">
+      {/* <div className="header__center-img">
         <img src="" alt="cake" />
-      </div>
+      </div> */}
       <section className="header__top">
         <div className="header__top-left">
           <p className="header__top-left-title">Сладкая булочка</p>
@@ -17,21 +17,19 @@ function Header() {
           </div>
         </div>
       </section>
-      <section className="header__center">
-        <div className="header__center-info">
-          <div className="header__center-info-box">
-            <p className="header__center-info-title">
-              lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-            <p className="header__center-info-text">
-              lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-          </div>
-          <button className="header__center-button">
+      <section className="header__info">
+        <div className="header__info-box">
+          <p className="header__info-title">
+            Пирожные и капкейки от 150 ₽/шт. с доставкой по Санкт Петербургу
+          </p>
+          <p className="header__info-text">
+            Приготовим за 3 часа в день заказа.
+            Доставка на авто в холодильнике.
+          </p>
+          <button className="header__info-button">
             Перейти в каталог
           </button>
         </div>
-
       </section>
     </header>
   );

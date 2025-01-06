@@ -10,7 +10,7 @@ function ReviewsCarousel() {
       setCurrentIndex((prevIndex) =>
         prevIndex === reviews.length - 1 ? 0 : prevIndex + 1
       );
-    }, 3000); // 3000 мс = 3 секунды
+    }, 10000); // 3000 мс = 3 секунды
 
     // Очистка интервала при размонтировании компонента
     return () => clearInterval(interval);
@@ -31,21 +31,20 @@ function ReviewsCarousel() {
   };
 
   return (
-    <div className="reviews-carousel">
-      <h2>Отзывы</h2>
-      <div className="review-card">
-        <h3 className="review-name">{reviews[currentIndex].name}</h3>
-        <p className="review-text">"{reviews[currentIndex].text}"</p>
-        <p className="review-rating">
+    <div className="main__reviews-carousel">
+        <h3 className="main__review-name">{reviews[currentIndex].name}</h3>
+      <div className="main__review-card">
+        <p className="main__review-text">"{reviews[currentIndex].text}"</p>
+      </div>
+        <p className="main__review-rating">
           Рейтинг: {reviews[currentIndex].rating} / 5
         </p>
-      </div>
-      <div className="carousel-buttons">
-        <button className="prev-button" onClick={prevSlide}>
-          &#8592; Назад
+      <div className="main__carousel-buttons">
+        <button className="main__prev-button" onClick={prevSlide}>
+          &#8592;
         </button>
-        <button className="next-button" onClick={nextSlide}>
-          Вперед &#8594;
+        <button className="main__next-button" onClick={nextSlide}>
+          &#8594;
         </button>
       </div>
     </div>

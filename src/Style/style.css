@@ -3,9 +3,211 @@
   margin: 0;
 }
 
+body {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+.header__info-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+}
+.header__info-title {
+  font-size: 30px;
+}
+.header__info-text {
+  max-width: 300px;
+}
+.header__info-button {
+  width: 277px;
+  height: 88px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 50px 30px 50px;
+  border-radius: 8px;
+  background: rgb(254, 216, 76);
+  font-family: "Montserrat", serif;
+  font-weight: 600;
+}
+.header__top {
+  display: flex;
+  gap: 50vw;
+  align-items: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0 50px;
+  gap: 100px;
+}
 .main__catalog {
   display: grid;
-  grid-template-columns: repeat(3, 250px);
+  grid-template-columns: repeat(3, 380px);
+  gap: 20px;
+}
+.main__catalog .main__product-image {
+  max-width: 380px;
+  min-height: 245px;
+  border-radius: 10px 10px 10px 10px;
+}
+.main__catalog .main__product-info {
+  padding: 50px 44px 50px 44px;
+}
+.main__catalog .main__product-title {
+  font-size: 24px;
+  font-weight: 700;
+}
+.main__catalog .main__product-text {
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.main__catalog .main__product-price {
+  margin-top: 24px;
+  font-size: 24px;
+  font-weight: 500;
+}
+.main__catalog .main__product-button {
+  margin-top: 12px;
+  width: 163px;
+  height: 68px;
+  padding: 20px 40px 20px 40px;
+  border-radius: 8px;
+  background: rgb(254, 216, 76);
+  font-family: "Montserrat", serif;
+  font-weight: 600;
+}
+.main__order__preparation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 100px;
+}
+.main__order__preparation-img {
+  max-width: 500px;
+  border-radius: 100px;
+}
+.main__order__preparation__info {
+  max-width: 520px;
+}
+.main__order__preparation__info-title {
+  font-size: 48px;
+  font-weight: 500;
+}
+.main__order__preparation__info-text {
+  font-size: 21px;
+  font-weight: 400;
+  margin-top: 24px;
+}
+.main__order__preparation__info-button {
+  width: 320px;
+  height: 87px;
+  border-radius: 8px;
+  background: rgb(254, 216, 76);
+  margin-top: 40px;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 500;
+}
+.main__chef {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+  position: relative;
+}
+.main__chef__box {
+  max-width: 580px;
+}
+.main__chef__box-info {
+  position: absolute;
+  bottom: 40px;
+  right: 80px;
+}
+.main__chef__box-info-name {
+  background-color: black;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+  border-radius: 15px 15px 0 0;
+  text-align: center;
+}
+.main__chef__box-info-position {
+  background-color: #fff;
+  padding: 10px 5px 10px 5px;
+  text-align: center;
+  border-radius: 0 0 15px 15px;
+}
+.main__chef__box-title {
+  font-size: 48px;
+  font-weight: 500;
+}
+.main__chef__box-text {
+  margin-top: 36px;
+  font-size: 18px;
+  font-weight: 400;
+  max-width: 500px;
+}
+.main__chef__box-button {
+  width: 299px;
+  height: 87px;
+  border-radius: 8px;
+  background: rgb(254, 216, 76);
+  margin-top: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Montserrat", serif;
+}
+.main__chef__img {
+  max-width: 310px;
+  border-radius: 63px;
+}
+.main__feedback {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.main__reviews-carousel {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  gap: 20px;
+}
+.main__review-card {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.main__carousel-buttons {
+  display: flex;
+  gap: 20px;
+}
+.main__prev-button {
+  width: 66px;
+  height: 66px;
+  border-radius: 100px;
+  background: rgb(254, 216, 76);
+}
+.main__next-button {
+  width: 66px;
+  height: 66px;
+  border-radius: 100px;
+  background: rgb(254, 216, 76);
 }
 
 .example__img-box {
