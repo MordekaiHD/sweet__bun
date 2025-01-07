@@ -1,9 +1,6 @@
 function Header() {
   return (
     <header className="header">
-      {/* <div className="header__center-img">
-        <img src="" alt="cake" />
-      </div> */}
       <section className="header__top">
         <div className="header__top-left">
           <p className="header__top-left-title">Сладкая булочка</p>
@@ -30,6 +27,7 @@ function Header() {
             Перейти в каталог
           </button>
         </div>
+        <img className="header__info-img" src="cupcake.png" alt="" />
       </section>
     </header>
   );

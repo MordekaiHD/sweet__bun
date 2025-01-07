@@ -1,3 +1,6 @@
+$box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.1);
+$button-color: rgb(254, 216, 76);
+
 * {
   padding: 0;
   margin: 0;
@@ -9,7 +12,6 @@ body {
   font-weight: 400;
   font-style: normal;
   padding: 20px;
-
 }
 
 .header {
@@ -21,6 +23,10 @@ body {
   gap: 100px;
 
   &__info {
+    display: flex;
+    flex-direction: row;
+    width: 75vw;
+    gap: 92px;
 
     &-box {
       display: flex;
@@ -38,16 +44,32 @@ body {
     }
 
     &-button {
-      width: 277px;
-      height: 88px;
+      width: 320px;
+      height: 87px;
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 30px 50px 30px 50px;
+      font-size: 18px;
+      border: none;
       border-radius: 8px;
-      background: rgb(254, 216, 76);
+      background: $button-color;
       font-family: "Montserrat", serif;
-      font-weight: 600;
+      font-weight: 500;
+      transition: border 0.3s ease, background 0.3s ease, color 0.3s ease;
+
+      &:hover {
+        border: 3px solid $button-color;
+        background: #fff;
+        color: rgb(0, 0, 0);
+      }
+
+      &:active {
+        transform: scale(0.98);
+      }
+    }
+
+    &-img {
+      max-width: 460px;
     }
   }
 
@@ -62,24 +84,27 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 50px 0 50px;
-  gap: 100px;
+  margin-top: 200px;
 
   &__catalog {
     display: grid;
     grid-template-columns: repeat(3, 380px);
     gap: 20px;
+    margin-top: 50px;
 
     .main__product {
+      box-shadow: $box-shadow;
+      border-radius: 25px;
 
       &-image {
         max-width: 380px;
         min-height: 245px;
-        border-radius: 10px 10px 10px 10px;
+        border-radius: 10px;
       }
 
       &-info {
-        padding: 50px 44px 50px 44px;
+        padding: 30px 0px 0px 15px;
+
       }
 
       &-title {
@@ -100,14 +125,25 @@ body {
       }
 
       &-button {
-        margin-top: 12px;
-        width: 163px;
-        height: 68px;
-        padding: 20px 40px 20px 40px;
+        margin-top: 30px;
+        width: 380px;
+        height: 50px;
+        border: none;
         border-radius: 8px;
-        background: rgb(254, 216, 76);
+        background: $button-color;
         font-family: "Montserrat", serif;
-        font-weight: 600;
+        font-weight: 500;
+        transition: border 0.3s ease, background 0.3s ease, color 0.3s ease;
+
+        &:hover {
+          border: 3px solid $button-color;
+          background: #fff;
+          color: rgb(0, 0, 0);
+        }
+
+        &:active {
+          transform: scale(0.98);
+        }
       }
     }
   }
@@ -116,7 +152,19 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 100px;
+    margin-top: 200px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 50px 0 50px 0px;
+    border-radius: 25px;
+    width: 77vw;
+    gap: 92px;
+
+    &__preview {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin-top: 30px;
+    }
 
     &-img {
       max-width: 500px;
@@ -140,30 +188,74 @@ body {
       &-button {
         width: 320px;
         height: 87px;
+        border: none;
         border-radius: 8px;
-        background: rgb(254, 216, 76);
+        background: $button-color;
         margin-top: 40px;
         font-family: "Montserrat";
         font-size: 18px;
         font-weight: 500;
+        transition: border 0.3s ease, background 0.3s ease, color 0.3s ease;
+
+        &:hover {
+          border: 3px solid $button-color;
+          background: #fff;
+          color: rgb(0, 0, 0);
+        }
+
+        &:active {
+          transform: scale(0.98);
+        }
       }
+
+      &-submit {
+        width: 520px;
+        height: 50px;
+        border: none;
+        border-radius: 8px;
+        background: $button-color;
+        font-family: "Montserrat";
+        font-size: 18px;
+        font-weight: 500;
+        transition: border 0.3s ease, background 0.3s ease, color 0.3s ease;
+
+        &:hover {
+          border: 3px solid $button-color;
+          background: #fff;
+          color: rgb(0, 0, 0);
+        }
+
+        &:active {
+          transform: scale(0.98);
+        }
+      }
+    }
+
+    &__success {
+      margin-top: 30px;
+      font-size: 20px;
     }
   }
 
   &__chef {
+    position: relative;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    gap: 50px;
-    position: relative;
+    margin-top: 200px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 50px 0 50px 0px;
+    border-radius: 25px;
+    width: 77vw;
+    gap: 92px;
+    justify-content: center;
 
     &__box {
       max-width: 580px;
 
       &-info {
         position: absolute;
-        bottom: 40px;
-        right: 80px;
+        bottom: 97px;
+        right: 290px;
 
         &-name {
           background-color: black;
@@ -179,7 +271,7 @@ body {
           padding: 10px 5px 10px 5px;
           text-align: center;
           border-radius: 0 0 15px 15px;
-
+          border: solid;
         }
       }
 
@@ -198,27 +290,133 @@ body {
       &-button {
         width: 299px;
         height: 87px;
+        border: none;
         border-radius: 8px;
-        background: rgb(254, 216, 76);
+        background: $button-color;
         margin-top: 50px;
         font-size: 18px;
         font-weight: 500;
         font-family: "Montserrat", serif;
+        transition: border 0.3s ease, background 0.3s ease, color 0.3s ease;
+
+        &:hover {
+          border: 3px solid $button-color;
+          background: #fff;
+          color: rgb(0, 0, 0);
+        }
+
+        &:active {
+          transform: scale(0.98);
+        }
       }
+
+
     }
-
-
 
     &__img {
       max-width: 310px;
       border-radius: 63px;
     }
+
+    &__success-message {
+      margin-top: 10px;
+      color: #4caf50;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+
+      &__content {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        width: 30vw;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      &__title {
+        font-size: 18px;
+        margin-bottom: 15px;
+        font-weight: bold;
+      }
+
+      &__textarea {
+        width: 25vw;
+        height: 100px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: none;
+        margin-bottom: 15px;
+      }
+
+      &__close,
+      &__submit {
+        width: 100px;
+        border: none;
+        border-radius: 4px;
+        font-size: 14px;
+        cursor: pointer;
+        padding: 10px;
+        margin: 0px 30px 0 0;
+      }
+
+      &__submit {
+        background: $button-color;
+        transition: background 0.3s ease, color 0.3s ease;
+
+        &:hover {
+          background: rgb(255, 255, 255);
+          outline: solid 2px $button-color;
+        }
+
+        &:active {
+          transform: scale(0.98);
+        }
+      }
+
+      &__close {
+        background: rgb(0, 0, 0);
+        color: #fff;
+        transition: background 0.3s ease, color 0.3s ease;
+
+        &:hover {
+          background: rgb(255, 255, 255);
+          color: black;
+          outline: solid 2px rgb(0, 0, 0);
+        }
+
+        &:active {
+          transform: scale(0.98);
+        }
+      }
+    }
   }
 
   &__feedback {
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    margin-top: 200px;
+    background-color: #fff6d6;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 50px 0px 50px 0px;
+    border-radius: 25px;
+    width: 77vw;
+    align-items: center;
   }
 
   &__reviews-carousel {
@@ -236,29 +434,129 @@ body {
 
   &__carousel-buttons {
     display: flex;
-    gap: 20px;
+    gap: 100px;
+    justify-content: center;
+    margin-top: 24px;
   }
 
   &__prev-button {
-    width: 66px;
-    height: 66px;
-    border-radius: 100px;
-    background: rgb(254, 216, 76);
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background: $button-color;
+    transition: border 0.3s ease, background 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      border: 3px solid $button-color;
+      background: #fff;
+      color: rgb(0, 0, 0);
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
   }
 
   &__next-button {
-    width: 66px;
-    height: 66px;
-    border-radius: 100px;
-    background: rgb(254, 216, 76);
-  }
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background: $button-color;
+    transition: border 0.3s ease, background 0.3s ease, color 0.3s ease;
 
-  
+    &:hover {
+      border: 3px solid $button-color;
+      background: #fff;
+      color: rgb(0, 0, 0);
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+  }
 }
 
+.main__example {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 200px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 50px 0px 50px 0px;
+  border-radius: 25px;
+  width: 77vw;
 
+}
 
-.example__img-box {
+.main__example__img-box {
   display: grid;
-  grid-template-columns: repeat(3, 250px);
+  grid-template-columns: repeat(3, 300px);
+  gap: 10px;
+  padding-top: 30px;
+
+  .main__example__img-product {
+    max-width: 300px;
+    border-radius: 10px;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0 50px;
+    gap: 25px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 50px 0px 50px 0px;
+    border-radius: 25px;
+    width: 77vw;
+
+    &-phone {
+      font-family: "Montserrat", serif;
+      font-weight: 400;
+      width: 400px;
+      height: 50px;
+      margin-right: 20px;
+      border: none;
+      border-radius: 8px;
+      background: rgb(228 233 237);
+      padding-left: 20px;
+    }
+
+    &-button {
+      font-family: "Montserrat", serif;
+      font-weight: 500;
+      width: 200px;
+      height: 50px;
+      border: none;
+      border-radius: 8px;
+      background: $button-color;
+      transition: border 0.3s ease, background 0.3s ease, color 0.3s ease;
+
+      &:hover {
+        border: 3px solid $button-color;
+        background: #fff;
+        color: rgb(0, 0, 0);
+      }
+
+      &:active {
+        transform: scale(0.98);
+      }
+    }
+  }
+
+  &-text {
+    display: flex;
+    justify-content: center;
+  }
 }
