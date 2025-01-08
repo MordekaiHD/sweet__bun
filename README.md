@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# Веб-сайт "Сладкая булочка"
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Обзор
+Веб-сайт "Сладкая булочка" — это проект на React, предназначенный для демонстрации и продажи капкейков и выпечки. Сайт ориентирован на клиентов из Мозыря и предлагает доставку, индивидуальные заказы и прямое общение с кондитером.
 
-## Available Scripts
+## Функциональные возможности
+### Шапка
+- Отображает название бренда и контактные данные.
+- Содержит промо-раздел с информацией о ценах и доставке.
+- Кнопка "Перейти в каталог" для удобной навигации.
 
-In the project directory, you can run:
+### Каталог
+- Динамически отображает список товаров из JSON-файла.
+- Включает изображения, описания и цены для каждого товара.
+- Кнопка "Купить" для каждого товара.
 
-### `npm start`
+### Информация о кондитере
+- Подчёркивает профессионализм и индивидуальный подход кондитера.
+- Позволяет пользователям задавать вопросы через модальное окно.
+- Модальное окно включает текстовый ввод для вопросов и сообщение об успешной отправке.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Отзывы клиентов
+- Отображает отзывы клиентов в формате карусели.
+- Автоматически переключает отзывы с возможностью ручной навигации.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Подготовка заказа
+- Позволяет пользователям загружать фото или эскиз для индивидуальных заказов.
+- Отображает предварительный просмотр загруженного файла.
+- Предоставляет сообщение об успешной отправке.
 
-### `npm test`
+### Примеры продукции
+- Демонстрирует примеры выполненных заказов с изображениями.
+- Загружает данные из JSON-файла для отображения.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Подвал
+- Собирает номера телефонов для оформления заказов.
+- Предоставляет информацию о компании и копирайт.
 
-### `npm run build`
+## Технические детали
+### Технологический стек
+- **React**: Фреймворк для создания динамических компонентов.
+- **HTML и CSS**: Используются для структуры и стилизации.
+- **JavaScript**: Добавляет интерактивность.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Ключевые функции
+- **Динамическое отображение**: Компоненты, такие как Catalog, ReviewsCarousel и ProductExample, динамически загружают и отображают данные из JSON-файлов.
+- **Модальные окна**: Используются для вопросов к кондитеру и отправки индивидуальных заказов.
+- **Загрузка файлов**: Реализована с использованием `URL.createObjectURL` для предварительного просмотра.
+- **Плавная прокрутка**: Используется метод `scrollIntoView` для комфортной навигации.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Зависимости
+- `react` (17.0+)
+- `react-dom` (17.0+)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Установка
+1. Склонируйте репозиторий:
+   ```bash
+   git clone <repository_url>
+   ```
+2. Перейдите в папку проекта:
+   ```bash
+   cd sweet-bun-website
+   ```
+3. Установите зависимости:
+   ```bash
+   npm install
+   ```
+4. Запустите сервер разработки:
+   ```bash
+   npm start
+   ```
 
-### `npm run eject`
+## Использование
+1. Откройте браузер и перейдите по адресу `http://localhost:3000`.
+2. Изучите каталог, оформите заказы и взаимодействуйте с кондитером.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Возможные улучшения
+- Интеграция с серверной частью для обновления данных в реальном времени.
+- Реализация корзины покупок и платёжного шлюза.
+- Добавление дополнительных анимаций для улучшения пользовательского опыта.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Лицензия
+Этот проект лицензирован на условиях [MIT License](LICENSE).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
