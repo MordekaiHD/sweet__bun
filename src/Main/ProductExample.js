@@ -1,4 +1,4 @@
-import example from "./JSON/example";
+import example from "../JSON/example";
 
 function ProductExample() {
   return (

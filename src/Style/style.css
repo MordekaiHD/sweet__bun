@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -22,7 +23,6 @@ body {
 .header__info {
   display: flex;
   flex-direction: row;
-  width: 75vw;
   gap: 92px;
 }
 .header__info-box {
@@ -66,6 +66,15 @@ body {
   display: flex;
   gap: 50vw;
   align-items: center;
+}
+.header__top-left-title {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header__top-left-img {
+  max-width: 30px;
 }
 
 .main {
@@ -355,24 +364,24 @@ body {
   width: 77vw;
   align-items: center;
 }
-.main__reviews-carousel {
+.main__feedback .main__reviews-carousel {
   display: flex;
   flex-direction: column;
   margin-top: 50px;
   gap: 20px;
 }
-.main__review-card {
+.main__feedback .main__reviews-carousel__review-card {
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
-.main__carousel-buttons {
+.main__feedback .main__reviews-carousel .main__reviews-buttons {
   display: flex;
   gap: 100px;
   justify-content: center;
   margin-top: 24px;
 }
-.main__prev-button {
+.main__feedback .main__reviews-carousel .main__reviews-buttons .main__prev-button {
   width: 100px;
   height: 40px;
   border: none;
@@ -380,15 +389,15 @@ body {
   background: rgb(254, 216, 76);
   transition: border 0.3s ease, background 0.3s ease, color 0.3s ease;
 }
-.main__prev-button:hover {
+.main__feedback .main__reviews-carousel .main__reviews-buttons .main__prev-button:hover {
   border: 3px solid rgb(254, 216, 76);
   background: #fff;
   color: rgb(0, 0, 0);
 }
-.main__prev-button:active {
+.main__feedback .main__reviews-carousel .main__reviews-buttons .main__prev-button:active {
   transform: scale(0.98);
 }
-.main__next-button {
+.main__feedback .main__reviews-carousel .main__reviews-buttons .main__next-button {
   width: 100px;
   height: 40px;
   border: none;
@@ -396,15 +405,14 @@ body {
   background: rgb(254, 216, 76);
   transition: border 0.3s ease, background 0.3s ease, color 0.3s ease;
 }
-.main__next-button:hover {
+.main__feedback .main__reviews-carousel .main__reviews-buttons .main__next-button:hover {
   border: 3px solid rgb(254, 216, 76);
   background: #fff;
   color: rgb(0, 0, 0);
 }
-.main__next-button:active {
+.main__feedback .main__reviews-carousel .main__reviews-buttons .main__next-button:active {
   transform: scale(0.98);
 }
-
 .main__example {
   display: flex;
   flex-direction: column;
@@ -416,14 +424,13 @@ body {
   border-radius: 25px;
   width: 77vw;
 }
-
 .main__example__img-box {
   display: grid;
   grid-template-columns: repeat(3, 300px);
   gap: 10px;
   padding-top: 30px;
 }
-.main__example__img-box .main__example__img-product {
+.main__example__img-product {
   max-width: 300px;
   border-radius: 10px;
 }

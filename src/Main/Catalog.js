@@ -1,4 +1,4 @@
-import products from './JSON/products';
+import products from '../JSON/products';
 
 function Catalog() {
   return (
